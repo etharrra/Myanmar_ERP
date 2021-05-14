@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto,sans-serif;
+}
+body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #666666;
+  text-align: left;
+  -webkit-text-size-adjust: 100%;
+}
+.c_01 {
+  background: #04AB8F;
+}
+.c_02 {
+  background: #1134E2;
+}
+.c_03 {
+  background: #3B00A4;
+}
+.c_04 {
+  background: #0054A6!important;
+  color: #FFFFFF!important;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  max-width: 79px;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  min-height: 17px;
+  display: inline-block;
+  font-size: 0.625rem;
+  padding: 2px 0;
+  border: none;
+  outline: none;
+}
+.btn_01{
+  max-width: 200px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 18px;
+  padding: 14px 0;
+  background: #ffffff;
+  color: #0054A6;
+}
+.btn_02{
+  max-width: 250px;
+  width: 100%;
+  border-radius: 30px;
+  padding: 12px 0;
+  font-size: 1.25rem;
+  line-height: 26px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #0054A6
+}
+/* form input group */
+input,select,textarea {
+  outline: none;
+  border: none;
+}
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+  min-width: 17px;
+  height: 17px;
+  border-radius: 3px;
+}
+input[type="checkbox"]:checked{
+  background: #707070;
+}
+input[type="checkbox"]::before, input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+input[type="checkbox"]::after {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #707070;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="checkbox"]:checked::before {
+  width: 4px;
+  height: 8px;
+  background: transparent;
+  border: solid #FFFFFF;
+  transform: rotate(45deg);
+  border-width: 0 2px 2px 0;
+  top: -4px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* end form group */
+figure {
+  line-height: 0;
+}
+img {
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.menu_click {
+  background: #ccc;
+}
+.max-content {
+  max-width: 1420px;
+  margin: 0 auto;
+}
+.inner-content {
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+/* dashboard */
+.container .content .content_inner {
+  padding: 35px 20px 90px;
+}
+.container .content .content_inner .daily_check ul.check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.container .content .content_inner .daily_check ul.check li.list {
+  width: 23.914%;
+  margin-right: 1.4%;
+  margin-top: 35px;
+}
+.container .content .content_inner .daily_check ul.check li.list:nth-of-type(4n) {
+  margin-right: 0;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row {
+  padding: 20px 10px 15px 5.455%;
+  -webkit-box-shadow: 0 0 6px #00000061;
+  box-shadow: 0 0 6px #00000061;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row .delete_list {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::before {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 13px;
+  width: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #0054A6;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 13px;
+  width: 2px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #0054A6;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row h4 {
+  font-size: 0.8125rem;
+  line-height: 18px;
+  color: #0054A6;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 15px;
+  padding-right: 0;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row ul li a {
+  font-size: 0.8125rem;
+  line-height: 18px;
+  color: #0054A6;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row ul li button {
+  font-size: 0.625rem;
+  line-height: 13px;
+  pointer-events: none;
+}
+/* end dashboard */
+
+/* login form */
+.form .head_txt{
+  padding: 60px 0;
+}
+.form .head_txt h3{
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: #0054A6;
+  text-align: center;
+}
+.form .login{
+  padding: 34px 0;
+  background: #F7F7F7;
+}
+.form .login .user_login{
+  display: flex;
+  justify-content: center;
+}
+.form .login .user_login .btn_01{
+  border-right: 2px solid #0054A6;
+}
+.form .login .user_login .btn_01:first-of-type{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.form .login .user_login .btn_01:last-of-type{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-right: 0;
+}
+.form .form_inner{
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.form .form_inner .login_form.item_02,.form .form_inner .login_form.item_03{
+  display: none;
+}
+.form .form_inner .login_form .form_group label{
+  display: block;
+  font-size: 1rem;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+.form .form_inner .login_form .form_group{
+  padding-top: 20px;
+}
+.form .form_inner .login_form .form_group:first-of-type{
+  padding-top: 0;
+}
+.form .form_inner .login_form .form_group input,.form .form_inner .login_form .form_group select,.form .form_inner .login_form .form_group textarea{
+  width: 100%;
+  height: 35px;
+  font-size: 0.8125rem;
+  line-height: 18px;
+  background: #FFFFFF;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: #666666;
+  box-sizing: border-box;
+}
+.form .form_inner .login_form .form_group select{
+  -webkit-appearance: none;
+}
+.form .form_inner .login_form .form_group textarea{
+  height: 80px;
+  resize: none;
+}
+.form .form_inner .login_form .form_group .select_box{
+  position: relative;
+}
+.form .form_inner .login_form .form_group .select_box::after{
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 2px solid #707070;
+  border-top: 0;
+  border-left: 0;
+  right: 15px;
+  top: -4.5px;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+.form .form_inner .check{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+}
+.form .form_inner .check label{
+  font-size: 1rem;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+}
+.form .form_inner .check label:first-of-type{
+  margin-right: 45px;
+}
+.form .form_inner .check label input{
+  margin-left: 20px;
+  -webkit-appearance: none;
+}
+.form .form_inner .submit_btn{
+  text-align: center;
+  padding-top: 50px;
+}
+/* end login form */
+
+@media screen and (max-width: 767px) {
+  .btn {
+    min-width: calc(200 / 750 * 100vw);
+    min-height: calc(30 / 750 * 100vw);
+    font-size: calc(24 / 750 * 100vw);
+    padding: calc(5 / 750 * 100vw);
+  }
+  .btn_01{
+    max-width: calc(200 / 750 * 100vw);
+    padding: calc(14 / 750 * 100vw) 0;
+    font-size: calc(18 / 750 * 100vw);
+    line-height: calc(24 / 750 * 100vw);
+  }
+  .btn_02{
+    max-width: calc(250 / 750 * 100vw);
+    padding: calc(12 / 750 * 100vw) 0;
+    font-size: calc(20 / 750 * 100vw);
+    line-height: calc(26 / 750 * 100vw);
+  }
+  input[type="checkbox"]{
+    min-width: calc(30 / 750 * 100vw);
+    height: calc(30 / 750 * 100vw);
+  }
+  input[type="checkbox"]:checked::before{
+    width: calc(6 / 750 * 100vw);
+    height: calc(14 / 750 * 100vw);
+    border-width: 0 calc(4 / 750 * 100vw) calc(4 / 750 * 100vw) 0;
+  }
+  
+  /* dashboard */
+  .container .content .content_inner {
+    padding: calc(35 / 750 * 100vw) calc(20 / 750 * 100vw) calc(90 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .container .content .content_inner .daily_check ul.check li.list {
+    width: 100%;
+    margin-right: 0;
+    margin-top: calc(35 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row {
+    padding: calc(40 / 750 * 100vw) calc(20 / 750 * 100vw) calc(30 / 750 * 100vw) calc(30 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row .delete_list {
+    top: calc(10 / 750 * 100vw);
+    width: calc(33 / 750 * 100vw);
+    height: calc(33 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::before {
+    height: calc(33 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::after {
+    height: calc(33 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row h4 {
+    font-size: calc(32 / 750 * 100vw);
+    line-height: calc(38 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row ul li {
+    padding-top: calc(20 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row ul li a {
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(32 / 750 * 100vw);
+  }
+  .container .content .content_inner .daily_check ul.check li.list .list_row ul li button {
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(32 / 750 * 100vw);
+  }
+  /* end dashboard */
+  /* login form */
+  .form .head_txt{
+    padding: calc(60 / 750 * 100vw) 0;
+  }
+  .form .head_txt h3{
+    font-size: calc(32 / 750 * 100vw);
+    line-height: calc(36 / 750 * 100vw);
+  }
+  .form .login{
+    padding: calc(34 / 750 * 100vw);
+  }
+  .form .form_inner{
+    max-width: calc(650 / 750 * 100vw);
+    padding: calc(60 / 750 * 100vw) calc(20 / 750 * 100vw);
+  }
+  .form .form_inner .login_form .form_group label{
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(32 / 750 * 100vw);
+    margin-bottom: calc(10 / 750 * 100vw);
+  }
+  .form .form_inner .login_form .form_group{
+    padding-top: calc(20 / 750 * 100vw);
+  }
+  .form .form_inner .login_form .form_group input,.form .form_inner .login_form .form_group select{
+    height: calc(60 / 750 * 100vw);
+    font-size: calc(20 / 750 * 100vw);
+    line-height: calc(28 / 750 * 100vw);
+    padding: 0 calc(10 / 750 * 100vw);
+  }
+  .form .form_inner .login_form .form_group textarea{
+    height: calc(160 / 750 * 100vw);
+  }
+  .form .form_inner .check{
+    padding-top: calc(20 / 750 * 100vw);
+  }
+  .form .form_inner .check label{
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(32 / 750 * 100vw);
+  }
+  .form .form_inner .check label:first-of-type{
+    margin-right: calc(45 / 750 * 100vw);
+  }
+  .form .form_inner .check label input{
+    margin-left: calc(20 / 750 * 100vw);
+  }
+  .form .form_inner .submit_btn{
+    padding-top: calc(50 / 750 * 100vw);
+  }
+  /* end login form */
+}
