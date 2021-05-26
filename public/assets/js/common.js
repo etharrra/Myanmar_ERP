@@ -49,7 +49,8 @@ $(document).ready(function(){
     //login form select change
     $(".user_login a.btn_01").click(function(){
         $(this).addClass('c_04').siblings().removeClass('c_04');
-        $("form.login_form").css('display','none');
+        $("form.login_form .user_form_content").css('display','none');
+        $(".multi_form .login_form").css('display','none');
         if($(this).hasClass("id_01")){
             $(".item_01").css('display','block');
         }
@@ -61,4 +62,20 @@ $(document).ready(function(){
         }
     });
 
+    // modal
+    $(".modal_menu").click(function(){
+        $(".container .menu_item.show").removeClass("show");
+        $(".menu_icon").removeClass("menu_open")
+    });
+
+    // file upload
+    $('.chooseFile').bind('change', function () {
+      var filename = $(this).val();
+      if (/^\s*$/.test(filename)) {
+        $(this).parent().next().text("No file chosen..."); 
+      }
+      else {
+        $(this).parent().next().text(filename.replace("C:\\fakepath\\", "")); 
+      }
+    });
 });

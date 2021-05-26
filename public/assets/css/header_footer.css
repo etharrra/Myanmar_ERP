@@ -68,7 +68,7 @@
   }
   .container .header .header_inner .role .menu .menu_icon {
     position: absolute;
-    background: url(../img/menu-icon.png) no-repeat;
+    background: url(../img/icon/menu-icon.png) no-repeat;
     background-position: 50%;
     background-size: 100%;
     display: inline-block;
@@ -79,7 +79,7 @@
     cursor: pointer;
   }
   .container .header .header_inner .role .menu .menu_icon.menu_open {
-    background: url(../img/cross.png) no-repeat;
+    background: url(../img/icon/cross.png) no-repeat;
     background-position: 50%;
     background-size: 100%;
     width: 16px;
@@ -137,13 +137,13 @@
     bottom: 0;
   }
   .container .admin_info ul li .admin_contact .ad_name::before{
-    background-image: url(../img/star.png);
+    background-image: url(../img/icon/star.png);
   }
   .container .admin_info ul li .admin_contact .ad_time::before{
-    background-image: url(../img/time.png);
+    background-image: url(../img/icon/time.png);
   }
   .container .admin_info ul li .admin_contact .ad_cmdy::before{
-    background-image: url(../img/setting.png);
+    background-image: url(../img/icon/setting.png);
   }
   .container .admin_info ul li .admin_more_info{
     padding: 16px 0;
@@ -214,11 +214,11 @@
     background: #FFFFFF;
   }
   .container .admin_info ul li .admin_footer .card::before{
-    background-image: url(../img/small-parson.png);
+    background-image: url(../img/icon/small-parson.png);
     left: 10px;
   }
   .container .admin_info ul li .admin_footer .logout::before{
-    background-image: url(../img/logout.png);
+    background-image: url(../img/icon/logout.png);
     left: 10px;
   }
   .container .menu_item {
@@ -256,7 +256,7 @@
   .container .menu_item ul.menu_list li:nth-child(4n+1) .menu_gp dt {
     padding-left: 11.315%;
   }
-  .container .menu_item ul.menu_list li:nth-child(4n+1) .menu_gp dd {
+  .container .menu_item ul.menu_list li:nth-child(4n+1) .menu_gp dd a {
     padding-left: 14.145%;
   }
   .container .menu_item ul.menu_list li .menu_gp dt {
@@ -266,7 +266,7 @@
     color: #0054A6;
     padding: 6px 0 6px 20px;
   }
-  .container .menu_item ul.menu_list li .menu_gp dd {
+  .container .menu_item ul.menu_list li .menu_gp dd a {
     display: block;
     position: relative;
     padding: 5px 30px;
@@ -339,10 +339,10 @@
     display: block;
   }
   .container .footer {
-    background: #0054A6;
+    background: #F8F8F8;
   }
   .container .footer .footer_inner {
-    padding: 17px 20px 17px;
+    padding: 35px 20px 15px;
   }
   .container .footer .footer_inner .footer_section {
     display: -webkit-box;
@@ -397,10 +397,18 @@
     width: auto;
   }
   .container .footer .footer_inner .copy_right {
+    padding-top: 47px;
     font-size: 0.75rem;
     line-height: 18px;
-    font-weight: bold;
-    color: #FFFFFF;
+    color: #0054A6;
+    text-align: center;
+  }
+  footer .footer.sub_footer{
+    background: #0054A6;
+    font-size: 0.74rem;
+    line-height: 12px;
+    color: #fff;
+    padding: 11.5px 20px;
     text-align: center;
   }
 
@@ -449,7 +457,7 @@
     .container .menu_item ul.menu_list li:nth-child(4n+1) .menu_gp dt {
         padding-left: calc( 40 / 750 * 100vw);
     }
-    .container .menu_item ul.menu_list li:nth-child(4n+1) .menu_gp dd {
+    .container .menu_item ul.menu_list li:nth-child(4n+1) .menu_gp dd a {
         padding-left: calc( 60 / 750 * 100vw);
     }
     .container .menu_item ul.menu_list li {
@@ -461,7 +469,7 @@
         line-height: calc(38 / 750 * 100vw);
         padding: calc(10 / 750 * 100vw) 0 calc(10 / 750 * 100vw) calc(40 / 750 * 100vw);
     }
-    .container .menu_item ul.menu_list li .menu_gp dd {
+    .container .menu_item ul.menu_list li .menu_gp dd a {
         padding: calc(10 / 750 * 100vw) calc(60 / 750 * 100vw);
     }
     .container .menu_item ul.menu_list li .menu_gp a {
@@ -489,7 +497,7 @@
         padding: calc(10 / 750 * 100vw) calc(60 / 750 * 100vw);
     }
     .container .footer .footer_inner {
-        padding: calc(34 / 750 * 100vw) calc(20 / 750 * 100vw) calc(34 / 750 * 100vw);
+        padding: calc(35 / 750 * 100vw) calc(20 / 750 * 100vw) calc(15 / 750 * 100vw);
     }
     .container .footer .footer_inner .footer_section {
         display: inline-block;
@@ -517,6 +525,10 @@
     .container .admin_info ul li .admin_contact p:first-of-type{
       margin-top: calc(20 /750 * 100vw);
     }
+    footer .footer.sub_footer{
+      font-size: calc(20 / 750 * 100vw);
+      padding: calc(15 / 750 * 100vw) calc(5 / 750 * 100vw);
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -526,10 +538,10 @@
     .container .menu_item ul.menu_list li:nth-last-child(1), .container .menu_item ul.menu_list li:nth-last-child(2), .container .menu_item ul.menu_list li:nth-last-child(3), .container .menu_item ul.menu_list li:nth-last-child(4) {
         padding-bottom: 3.522%;
     }
-    .container .menu_item ul.menu_list li .menu_gp dd:hover {
+    .container .menu_item ul.menu_list li .menu_gp dd a:hover {
         background: #ccc;
     }
-    .container .menu_item ul.menu_list li .menu_gp dd:hover .sub_menu {
+    .container .menu_item ul.menu_list li .menu_gp dd a:hover .sub_menu {
      display: block;
     }
     .container .footer .footer_inner .footer_section .contact {

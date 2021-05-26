@@ -35,7 +35,9 @@ button {
   text-align: center;
   color: #FFFFFF;
   min-height: 17px;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.625rem;
   padding: 2px 0;
   border: none;
@@ -46,7 +48,7 @@ button {
   width: 100%;
   text-align: center;
   font-weight: bold;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 18px;
   padding: 14px 0;
   background: #ffffff;
@@ -56,8 +58,8 @@ button {
   max-width: 250px;
   width: 100%;
   border-radius: 30px;
-  padding: 12px 0;
-  font-size: 1.25rem;
+  padding: 9.5px 0;
+  font-size: 1.125rem;
   line-height: 26px;
   font-weight: bold;
   color: #FFFFFF;
@@ -67,6 +69,9 @@ button {
 input,select,textarea {
   outline: none;
   border: none;
+}
+select{
+  cursor: pointer;
 }
 input[type="checkbox"] {
   position: relative;
@@ -120,6 +125,15 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+select:required:invalid {
+  color: #ccc!important;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
 .menu_click {
   background: #ccc;
 }
@@ -130,6 +144,9 @@ a {
 .inner-content {
   max-width: 1380px;
   margin: 0 auto;
+}
+.pd_0{
+  padding-top: 0!important;
 }
 
 /* dashboard */
@@ -162,37 +179,34 @@ a {
   box-sizing: border-box;
   position: relative;
 }
-.container .content .content_inner .daily_check ul.check li.list .list_row .delete_list {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  width: 10px;
-  height: 10px;
+.close{
+  display: inline-block;
+  vertical-align: middle;
+  background: #8e99ac;
+  position: relative;
+  transform: translateY(-1.5px) rotate(45deg);
+  width: 16px;
+  height: 2px;
+  cursor: pointer;
 }
-.container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::before {
+.close:before{
+  content: "";
   position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 13px;
-  width: 2px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: #0054A6;
-}
-.container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 13px;
-  width: 2px;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  background-color: #0054A6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
 }
 .container .content .content_inner .daily_check ul.check li.list .list_row h4 {
   font-size: 0.8125rem;
   line-height: 18px;
   color: #0054A6;
+}
+.container .content .content_inner .daily_check ul.check li.list .list_row .close{
+  float: right;
 }
 .container .content .content_inner .daily_check ul.check li.list .list_row ul li {
   display: -webkit-box;
@@ -223,7 +237,7 @@ a {
 .form .head_txt{
   padding: 60px 0;
 }
-.form .head_txt h3{
+h3{
   font-size: 1.5rem;
   line-height: 32px;
   color: #0054A6;
@@ -253,18 +267,48 @@ a {
   max-width: 550px;
   width: 100%;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 60px 20px 100px 20px;
 }
-.form .form_inner .login_form.item_02,.form .form_inner .login_form.item_03{
+.item_02,.item_03{
   display: none;
+}
+.constant input:read-only{
+  background: #F7F7F7!important;
 }
 .form .form_inner .login_form .form_group label{
   display: block;
-  font-size: 1rem;
-  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 19px;
   margin-bottom: 5px;
 }
-.form .form_inner .login_form .form_group{
+.form .form_inner .login_form .form_group_list{
+  display: flex;
+  align-items: flex-start;
+}
+.form .form_inner .login_form .form_group_list.tw_list .form_group{
+  width: 48.546%;
+}
+.form .form_inner .login_form .form_group_list .form_group{
+  padding-top: 0;
+  width: 31.455%;
+  margin-right: 15px;
+}
+.form .form_inner .login_form .form_group_list .form_group:last-child{
+  margin-right: 0;
+}
+.error{
+  font-size: 0.75rem;
+  line-height: 16px;
+  color: #FF0000;
+  margin-top: 5px;
+}
+.req_txt{
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #FF0000;
+  margin-left: 10px;
+}
+.form .form_inner .login_form .form_group, .form .form_inner .login_form .form_group_list{
   padding-top: 20px;
 }
 .form .form_inner .login_form .form_group:first-of-type{
@@ -295,8 +339,8 @@ a {
 .form .form_inner .login_form .form_group .select_box::after{
   content: "";
   position: absolute;
-  width: 6px;
-  height: 6px;
+  width: 5.079px;
+  height: 5.078px;
   border: 2px solid #707070;
   border-top: 0;
   border-left: 0;
@@ -314,8 +358,8 @@ a {
   padding-top: 20px;
 }
 .form .form_inner .check label{
-  font-size: 1rem;
-  line-height: 21px;
+  font-size: 0.875rem;
+  line-height: 19px;
   display: flex;
   align-items: center;
 }
@@ -330,6 +374,147 @@ a {
   text-align: center;
   padding-top: 50px;
 }
+
+
+/*  add new css   */
+::-webkit-calendar-picker-indicator{
+  cursor: pointer;
+}
+/*  modal box   */
+.modal_open {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+  background: #00000082;
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+
+.modal_open:target {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal_open .modal_inner {
+  /*position: absolute;*/
+  position: relative;
+  max-width: 590px;
+  display: block;
+  line-height: 1.8;
+  width: 70%;
+  margin: 0 auto;
+  background: #fff;
+  /*top: 300px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+  background: white;
+  color: #34495E;*/
+  padding: 20px 0 50px 0;
+  /*height: 500px;*/
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modal_open .modal_inner::-webkit-scrollbar {
+    display: none;
+}
+.modal_open .modal_inner .modal_inner_content{
+  padding: 0 20px;
+}
+.modal_open .modal_inner h2 { margin-top: 0; }
+
+.modal_open .modal_inner code { font-weight: bold; }
+
+.modal_open .modal_close_link {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.3;
+  -webkit-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+.modal_open .modal_close{
+  display: block;
+  margin: 0 20px 0 auto;
+  width: 15px;
+}
+.modal_open .modal_close span.close{
+  background: #666666;
+  margin: 5px 20px 0 0;
+}
+.modal_open h3{
+  padding: 11px 0 15px 0;
+  border-bottom: 1px solid #DEE2E6;
+}
+.modal_open .modal_inner .form .form_inner{
+  padding: 0;
+  margin-top: 30px;
+}
+.modal_open .modal_inner .form .form_inner .submit_btn{
+  padding-top: 40px;
+}
+
+/*  file upload   */
+.file-upload .file-select-button{
+  position: relative;
+  width: 100%;
+  height: 35px;
+  border: 1px solid #707070;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.file-upload .file-select-button input{
+  opacity: 0;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  background: red;
+  width: 100%;
+  height: 100%!important;
+  padding: 0!important;
+}
+.file_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  cursor: pointer;
+}
+.file_btn span, .noFile{
+  font-size: 0.8125rem;
+  line-height: 18px;
+}
+.noFile{
+  margin-top: 5px;
+  word-break: break-all;
+}
+.upload_icon{
+  width: 15px;
+  margin-right: 15px;
+}
+
+
+
+/*  add new css   */
+
 /* end login form */
 
 @media screen and (max-width: 767px) {
@@ -348,8 +533,8 @@ a {
   .btn_02{
     max-width: calc(250 / 750 * 100vw);
     padding: calc(12 / 750 * 100vw) 0;
-    font-size: calc(20 / 750 * 100vw);
-    line-height: calc(26 / 750 * 100vw);
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(40 / 750 * 100vw);
   }
   input[type="checkbox"]{
     min-width: calc(30 / 750 * 100vw);
@@ -379,16 +564,9 @@ a {
   .container .content .content_inner .daily_check ul.check li.list .list_row {
     padding: calc(40 / 750 * 100vw) calc(20 / 750 * 100vw) calc(30 / 750 * 100vw) calc(30 / 750 * 100vw);
   }
-  .container .content .content_inner .daily_check ul.check li.list .list_row .delete_list {
-    top: calc(10 / 750 * 100vw);
-    width: calc(33 / 750 * 100vw);
-    height: calc(33 / 750 * 100vw);
-  }
-  .container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::before {
-    height: calc(33 / 750 * 100vw);
-  }
-  .container .content .content_inner .daily_check ul.check li.list .list_row .delete_list::after {
-    height: calc(33 / 750 * 100vw);
+  .close {
+    width: calc(25 / 750 * 100vw);
+    height: calc(3 / 750 * 100vw);
   }
   .container .content .content_inner .daily_check ul.check li.list .list_row h4 {
     font-size: calc(32 / 750 * 100vw);
@@ -410,23 +588,27 @@ a {
   .form .head_txt{
     padding: calc(60 / 750 * 100vw) 0;
   }
-  .form .head_txt h3{
+  h3{
     font-size: calc(32 / 750 * 100vw);
     line-height: calc(36 / 750 * 100vw);
   }
   .form .login{
     padding: calc(34 / 750 * 100vw);
   }
+  .form .login .user_login .btn_01{
+    border-width: calc(2 / 750 * 100vw);
+  }
   .form .form_inner{
-    max-width: calc(650 / 750 * 100vw);
-    padding: calc(60 / 750 * 100vw) calc(20 / 750 * 100vw);
+    max-width: 100%;
+    padding: calc(60 / 750 * 100vw) calc(20 / 750 * 100vw) calc(100 / 750 * 100vw) calc(20 / 750 * 100vw);
+    box-sizing: border-box;
   }
   .form .form_inner .login_form .form_group label{
     font-size: calc(24 / 750 * 100vw);
-    line-height: calc(32 / 750 * 100vw);
+    line-height: calc(30 / 750 * 100vw);
     margin-bottom: calc(10 / 750 * 100vw);
   }
-  .form .form_inner .login_form .form_group{
+  .form .form_inner .login_form .form_group, .form .form_inner .login_form .form_group_list{
     padding-top: calc(20 / 750 * 100vw);
   }
   .form .form_inner .login_form .form_group input,.form .form_inner .login_form .form_group select{
@@ -454,5 +636,49 @@ a {
   .form .form_inner .submit_btn{
     padding-top: calc(50 / 750 * 100vw);
   }
+  .req_txt{
+    font-size: calc(24 / 750 * 100vw);
+    margin-left: calc(10 / 750 * 100vw);
+  }
+  .error{
+    font-size: calc(20 / 750 * 100vw);
+    line-height: calc(24 / 750 * 100vw);
+  }
   /* end login form */
+  .file_btn span, .noFile{
+    font-size: calc(24 / 750 * 100vw);
+    line-height: calc(30 / 750 * 100vw);
+  }
+  .file-upload .file-select-button{
+    height: calc(60 / 750 * 100vw);
+  }
+  .upload_icon{
+    width: calc(25 / 750 * 100vw);
+    margin-right: calc(5 / 750 * 100vw);
+  }
+  /*  modal   */
+  .modal_open{
+    padding-top: calc(30 / 750 * 100vw);
+  }
+  .modal_open .modal_inner{
+    max-width: 100%;
+    width: 90%;
+    padding: calc(20 / 750 * 100vw) 0 calc(50 / 750 * 100vw) 0;
+    /*height: calc(420 / 750 * 100vw);*/
+  }
+  .modal_open h3{
+    padding: calc(11 / 750 * 100vw) 0 calc(15 / 750 * 100vw) 0;
+  }
+  .modal_open .modal_inner .modal_inner_content{
+    padding: 0 calc(20 / 750 * 100vw);
+  }
+  .modal_open .modal_inner .form .form_inner{
+    margin-top: calc(30 / 750 * 100vw);
+  }
+  .modal_open .modal_inner .form .form_inner .submit_btn{
+    padding-top: calc(30 / 750 * 100vw);
+  }
+  .modal_open .modal_close{
+    margin: 0 calc(20 / 750 * 100vw) 0 auto;
+  }
 }
